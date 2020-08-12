@@ -1,7 +1,7 @@
 <?php
 
 // Create constants
-DEFINE ('DB_USER', 'contentuser');
+DEFINE ('DB_USER', 'contentUser');
 DEFINE ('DB_PSWD', 'imNotActuallyContent');
 DEFINE ('DB_SERVER', 'localhost');
 DEFINE ('DB_NAME', 'site_generator_db');
