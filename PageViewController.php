@@ -1,5 +1,5 @@
 <?php 
-    class PageController {
+    class PageViewController {
         Public $page;
 
         function __construct($databaseConnection, $pageNum)
