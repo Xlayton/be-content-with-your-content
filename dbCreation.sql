@@ -15,15 +15,15 @@ create table if not exists websiteUsers(
 create table if not exists websiteTemplates(
     id int not null auto_increment primary key,
     PageTitle varchar(25) Not null,
-    PageHeader varchar(25),
-    PageTextContent varchar(225),
+    PageHeader text,
+    PageTextContent text,
     ParentPage int default 0,
     SortOrder int default 2,
     IsEnabled tinyInt 
 );
 
 -- Create user to use database instead of root user -----------------------
-create user 'contentUser'@'localhost' identified by 'imNotActuallyContent';
+create user if not exists 'contentUser'@'localhost' identified by 'imNotActuallyContent';
 grant all privileges on site_generator_db.* to contentUser@localhost;
 flush privileges;
 

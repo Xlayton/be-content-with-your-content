@@ -40,11 +40,20 @@ function PageContentGet($dbConn, $Id) {
     return $return;
 }
 
+//  Update a page content by inputted id
+function PageContentUpdate($dbConn, $Id, $PageHeader, $PageTextContent){
+    $return = null;
+    $query = "Update websiteTemplates set PageHeader = \"$PageHeader\", PageTextContent = \"$PageTextContent\" where id = " . $Id;
+    $return = @mysqli_query($dbConn, $query);
+    return $return;
+}
+
 // Disable a specific website template based on the inputted id
 function MyPageremove($dbConn, $Id) {
-    $query = "Update FROM websiteTemplates set IsEnabled = 0 where id = " . $Id;
+    $query = "Update websiteTemplates set IsEnabled = 0 where id = " . $Id;
     return @mysqli_query($dbConn, $query);
 }
+
 
 ?>
 

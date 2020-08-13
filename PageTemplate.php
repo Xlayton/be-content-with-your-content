@@ -3,12 +3,14 @@
         Private $title;
         Private $header;
         Private $textContent;
+        Private $id;
 
-        function __construct($title, $header, $textContent)
+        function __construct($id, $title, $header, $textContent)
         {
-                $this->title = $title;
-                $this->header = $header;
-                $this->textContent = $textContent;
+            $this->id = $id;
+            $this->title = $title;
+            $this->header = $header;
+            $this->textContent = $textContent;
         }
 
         function getNormalHtml() {
@@ -21,7 +23,12 @@
         }
 
         function getEditableHtml() {
-            return "Not Implemented Yet";
+            $page = "<!DOCTYPE html>"; 
+            $page .= "<html lang='en'>";
+            $page .= "<head><title>$this->title</title></head>";
+            $page .= "<body><form action='updatePage.php'><textarea name='header'>$this->header</textarea><textarea name='textContent'>$this->textContent</textarea><input type='hidden' name='pageNum' value='$this->id'/><input type='submit' value='Save' /></form></body>";
+            $page .= "</html>";
+            return $page;
         }
     }
 ?>
