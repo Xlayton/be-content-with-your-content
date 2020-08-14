@@ -4,7 +4,9 @@
 ?>
 
 <!-- two buttons that change session value -->
-<button type="button">Admin</button>
-<button type="button">User</button>
+<form method="post" action="index.php" >
+    <button type="submit" name="isAdmin" value ="1">Admin</button>
+    <button type="submit" name="isAdmin" value="0">User</button>
+</form>
 
 <!-- Need to add sessions for changing from admin to user -->
