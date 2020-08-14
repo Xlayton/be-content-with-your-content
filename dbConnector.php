@@ -63,6 +63,11 @@ function MyPageremove($dbConn, $Id) {
     return @mysqli_query($dbConn, $query);
 }
 
+function GetPageLinks($dbConn, $pageId) {
+    $query = "SELECT id, ParentPage, PageTitle FROM websiteTemplates where ParentPage = 0 or ParentPage = $pageId";
+    return @mysqli_query($dbConn, $query);
+}
+
 
 ?>
 
