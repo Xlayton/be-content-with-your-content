@@ -24,13 +24,13 @@
             $page .= "<head><title>$this->title</title><link href='./style.css' rel='stylesheet'></head>";
             $page .= "<body><nav class='main-nav'>";
             foreach($this->mainNavContent as $title=>$id) {
-                $page .= "<a class='nav-link' href='/?pageNum=$id'>$title</a>";
+                $page .= "<a class='nav-link' href='./?pageNum=$id'>$title</a>";
             }
-            $page .= "<a class='nav-link' href='/login.php'>Log In</a>";
+            $page .= "<a class='nav-link' href='./login.php'>Log In</a>";
             $page .= "</nav>";
             $page .= "<nav class='sub-nav'>";
             foreach($this->subNavContent as $title=>$id) {
-                $page .= "<a class='nav-link' href='/?pageNum=$id'>$title</a>";
+                $page .= "<a class='nav-link' href='./?pageNum=$id'>$title</a>";
             }
             $page .= "</nav>";
             $page .= "<header>$this->header</header><div class='content'>$this->textContent</div></body>";
