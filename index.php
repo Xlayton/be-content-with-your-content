@@ -32,7 +32,7 @@
     }
 
     //Check if the session is in admin mode and show the form to go into edit
-    if($_SESSION["isAdmin"] == 1){
+    if(isset($_SESSION["isAdmin"]) && $_SESSION["isAdmin"] == 1){
         echo "<a href='index.php?isEdit=true'>Edit</a>";
     }
 
