@@ -5,24 +5,28 @@
     --dark-hover: #444;
     --dark-shadow: #3334;
     --dark-image: black;
+    --dark-button: #111;
 
     --light-background: #ccc;
     --light-foreground: #222;
     --light-hover: #aaa;
     --light-shadow: #ccc4;
     --light-image: url('./images/grey.jpg');
+    --light-button: #bbb;
 
     --pink-background: #ff94ca;
     --pink-foreground: #71ff64;
     --pink-hover: #ffb6ec;
     --pink-shadow: #804d6e44;
     --pink-image: url('./images/stick.gif');
+    --pink-button: #ee83b9;
 
     --background-color: var(--dark-background);
     --foreground-color: var(--dark-foreground);
     --hover: var(--dark-hover);
     --shadow: var(--dark-shadow);
     --image: var(--dark-image);
+    --button-color: var(--dark-button);
 }
 
 
@@ -78,7 +82,7 @@ footer {
     padding: 0;
     font-size: 18pt;
     border-style: none;
-    background: var(--background-color);
+    background: var(--button-color);
     color: var(--foreground-color);
     padding: 20px;
     margin: 5px;
@@ -86,13 +90,14 @@ footer {
 }
 
 /* Hover on save button */
-.nav-link, .button:hover {
+.nav-link:hover, .button:hover {
     background-color: var(--hover);
     cursor: pointer;
 }
 
 /* Text area for the user content */
-textarea {
+textarea, input {
+    margin: 5px;
     background-color: var(--background-color);
     color: var(--foreground-color);
     font-size: 20pt;
