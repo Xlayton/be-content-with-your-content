@@ -40,6 +40,15 @@ function PageContentGet($dbConn, $Id) {
     return $return;
 }
 
+//Create a new page
+//pageId is ParentPage
+function PageCreate($dbConn, $PageId, $PageTitle) {
+    $return = null;
+    $query = "INSERT into websitetemplates (PageTitle,PageHeader,PageTextContent,ParentPage,SortOrder,IsEnabled) values (\"$PageTitle\", \"\", \"\", $PageId, 0, 1)";
+    $return = @mysqli_query($dbConn, $query);
+    return $return;
+}
+
 //  Update a page content by inputted id
 function PageContentUpdate($dbConn, $Id, $PageHeader, $PageTextContent){
     $return = null;

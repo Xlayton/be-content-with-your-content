@@ -33,7 +33,12 @@
 
     //Check if the session is in admin mode and show the form to go into edit
     if(isset($_SESSION["isAdmin"]) && $_SESSION["isAdmin"] == 1){
-        echo "<a href='index.php?isEdit=true'>Edit</a>";
+        echo "<a href='index.php?pageNum=$pageNum&isEdit=true'>Edit</a>";
+        echo "<form action='createPage.php' method='get'>
+        <input type='hidden' value='$pageNum' name='pageNum' />
+        <input type='text' name='header' placeholder='Title'/>
+        <input type='submit' value='Create Page'/>
+        </form>";
     }
 
 ?>

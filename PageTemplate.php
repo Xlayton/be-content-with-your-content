@@ -13,6 +13,7 @@
             $this->textContent = $textContent;
         }
 
+        //Content of normal html pages and layout
         function getNormalHtml() {
             $page = "<!DOCTYPE html>"; 
             $page .= "<html lang='en'>";
@@ -22,6 +23,7 @@
             return $page;
         }
 
+        //Layout for the edit part of pages
         function getEditableHtml() {
             $page = "<!DOCTYPE html>"; 
             $page .= "<html lang='en'>";
