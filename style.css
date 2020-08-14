@@ -18,11 +18,11 @@
     --pink-shadow: #804d6e44;
     --pink-image: url('./images/stick.gif');
 
-    --background-color: var(--light-background);
-    --foreground-color: var(--light-foreground);
-    --hover: var(--light-hover);
-    --shadow: var(--light-shadow);
-    --image: var(--light-image);
+    --background-color: var(--dark-background);
+    --foreground-color: var(--dark-foreground);
+    --hover: var(--dark-hover);
+    --shadow: var(--dark-shadow);
+    --image: var(--dark-image);
 }
 
 
@@ -65,8 +65,13 @@ footer {
     text-align: center;
 }
 
+.main-nav, .sub-nav {
+    margin: 20px;
+    padding: 20px;
+}
+
 /* save button */
-.button {
+.nav-link, .button {
     text-decoration: none;
     border-radius: 5px;
     margin: 0;
@@ -81,7 +86,7 @@ footer {
 }
 
 /* Hover on save button */
-.button:hover {
+.nav-link, .button:hover {
     background-color: var(--hover);
     cursor: pointer;
 }
