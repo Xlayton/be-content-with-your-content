@@ -33,18 +33,22 @@
 
     //Check if the session is in admin mode and show the form to go into edit
     if(isset($_SESSION["isAdmin"]) && $_SESSION["isAdmin"] == 1){
-        //Link to edit page
-        echo "<a class='button' href='index.php?pageNum=$pageNum&isEdit=true'>Edit</a>";
-        
+        echo"<div class='forms'>";
         //Form to Create a new page
         echo "<form action='createPage.php' method='get'>
         <input type='hidden' value='$pageNum' name='pageNum' />
         <input type='text' name='header' placeholder='Title'/>
         <input class='button' type='submit' value='Create Page'/>
         </form>";
-
-        //Form to delete page
         
+        //Link to edit page
+        echo "<a class='button' href='index.php?pageNum=$pageNum&isEdit=true'>Edit</a>";
+            
+        //Form to delete page
+        echo "<form action='deletePage.php' method='get'>
+        <input type='hidden' value='$pageNum' name='pageNum' />
+        <input class='button' type='submit' value='Delete This Page'/>
+        </form>";
     }
 
 ?>
