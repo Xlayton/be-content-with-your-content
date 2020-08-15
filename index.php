@@ -43,13 +43,23 @@
         </form>";
         
         //Link to edit page
-        echo "<a id='edit' class='button' href='index.php?pageNum=$pageNum&isEdit=true'>Edit</a>";
+        echo "<form><a id='edit' class='button' href='index.php?pageNum=$pageNum&isEdit=true'>Edit</a></form>";
             
         //Form to delete page
         echo "<form action='deletePage.php' method='get'>
         <input type='hidden' value='$pageNum' name='pageNum' />
         <input class='button' type='submit' value='Delete This Page'/>
         </form></div>";
+
+        echo "<form id='theme-picker' class='special-form' action='/action_page.php'>
+        <p>Theme:&nbsp;</p>
+        <label for='dark'>Dark</label>
+        <input type='radio' id='dark' name='theme' value='dark'>
+        <label for='light'>Light</label>
+        <input type='radio' id='light' name='theme' value='light'>
+        <label for='pink'>Pink</label>
+        <input type='radio' id='pink' name='theme' value='pink'>
+        </form><script src='./script.js'></script>";
     }
 
 ?>
