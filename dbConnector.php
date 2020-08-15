@@ -64,7 +64,7 @@ function MyPageremove($dbConn, $Id) {
 }
 
 function GetPageLinks($dbConn, $pageId) {
-    $query = "SELECT id, ParentPage, PageTitle FROM websiteTemplates where ParentPage = 0 or ParentPage = $pageId and IsEnabled = 1";
+    $query = "SELECT id, ParentPage, PageTitle FROM websiteTemplates where (ParentPage = 0 or ParentPage = $pageId) and IsEnabled = 1";
     return @mysqli_query($dbConn, $query);
 }
 
